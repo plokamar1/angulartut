@@ -10,4 +10,8 @@ app3.controller('gListCtrl',function($scope){
         {item:"Rice", purchased: false},
     ];
 
+    $scope.getList = function(){
+      return $scope.showList ? "groceryList.html" : "OgroceryList.html";//The ? means  condition ? value-if-true : value-if-false
+    };
+
 });
