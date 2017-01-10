@@ -20,6 +20,15 @@
                 </li>
             </ol>
 
+            <table>
+              <tr ng-repeat-start="grocery in groceries">
+                <td>{{grocery.item}}</td>
+              </tr>
+              <tr ng-repeat-end>
+                <td>{{grocery.purchased}}</td>
+              </tr>
+            </table>
+        </div>
 
 
 
