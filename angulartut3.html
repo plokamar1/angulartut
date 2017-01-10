@@ -1,7 +1,12 @@
 <!doctype html>
-<html ng-app="app3">
+<html ng-app="app3" ng-cloak>
     <head>
         <title>AngularJS Tutorial 3</title>
+        <style>
+        [ng\:cloak], [ng-cloak], .ng-cloak{
+            display: none;
+        }
+        </style><!--The problem with having the imported angular cdn in the end of the body is that it shows the {{tags}} when loading the page and before showing the results. so this is one solution for this problem. Another solution is to put the imported script in the beginning of the body -->
     </head>
     <body>
 
