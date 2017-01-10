@@ -9,9 +9,21 @@
         </style><!--The problem with having the imported angular cdn in the end of the body is that it shows the {{tags}} when loading the page and before showing the results. so this is one solution for this problem. Another solution is to put the imported script in the beginning of the body -->
     </head>
     <body>
+        <div id="groceryList" ng-controller="gListCtrl">
+            <h3 class="ListTitle">{{groceries.length}} Groceries to Get</h3>
+
+            <ol>
+                <li>{{groceries[0].item}}</li>
+            </ol>
+            <ol start="2">
+                <li ng-repeat="grocery in groceries" ng-if="$index > 0">{{grocery.item}} {{$index}}
+                </li>
+            </ol>
+
+
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-        <script src = "js/exam2.js"></script>
+        <script src = "js/exam3.js"></script>
     </body>
 </html>
