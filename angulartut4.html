@@ -6,7 +6,18 @@
     <body ng-app="app4" ng-controller="ctrl4">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 		<script src="js/exam4.js"></script>
+        <input type="text" ng-model="searchF">
 
+        <table>
+            <tr ng-repeat="programmer in programmers| filter:searchF"><!--By using filter: searchF i use the data that the user puts in the textbox. 
+            With the two-way data binding of angular the view is dynamic.
+             -->
+                <td>{{programmer[0]}}</td>
+                <td>{{programmer[1]}}</td>
+                <td>{{programmer[2]}}</td>
+                <td>{{programmer[3]}}</td>
+            </tr>
+        </table>
 
     </body>
 </html>
